@@ -23,15 +23,43 @@ class ViewAnimationsActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.tvText.hide()
+        //binding.tvText.hide()
+        binding.progressIndicator.hide()
+
+        binding.btnCircularRevealAnimation.setOnClickListener {
+            createCircularRevealAnimation()
+        }
     }
 
     override fun onStart() {
         super.onStart()
-
-        createCrossFadeAnimation()
+        //createCrossFadeAnimation()
     }
 
+    private fun createCircularRevealAnimation() {
+        val cx = binding.tvText.width / 2
+        val cy = binding.tvText.height / 2
+
+        val initialRadius = hypot(cx.toDouble(), cy.toDouble()).toFloat()
+
+        val anim = ViewAnimationUtils.createCircularReveal(
+            binding.tvText,
+            cx,
+            cy,
+            initialRadius,
+            0f
+        )
+
+        anim.addListener(object : AnimatorListenerAdapter() {
+
+            override fun onAnimationEnd(animation: Animator) {
+                super.onAnimationEnd(animation)
+                binding.tvText.hide()
+            }
+        })
+
+        anim.start()
+    }
 
     private fun createCrossFadeAnimation() {
         binding.tvText.apply {
