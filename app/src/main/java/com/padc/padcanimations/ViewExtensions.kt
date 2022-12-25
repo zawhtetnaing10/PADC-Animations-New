@@ -4,21 +4,21 @@ import android.view.View
 import android.widget.Button
 import com.google.android.material.button.MaterialButton
 
-fun MaterialButton.toggleVisibility() {
+fun View.toggleVisibility() {
     if (this.isShownOnScreen())
         this.hide()
     else
         this.show()
 }
 
-fun MaterialButton.hide() {
+fun View.hide() {
     visibility = View.GONE
 }
 
-fun MaterialButton.show() {
+fun View.show() {
     visibility = View.VISIBLE
 }
 
-fun MaterialButton.isShownOnScreen(): Boolean {
+fun View.isShownOnScreen(): Boolean {
     return visibility == View.VISIBLE
 }
