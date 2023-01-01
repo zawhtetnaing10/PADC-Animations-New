@@ -23,7 +23,7 @@ class ViewAnimationsActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        //binding.tvText.hide()
+        binding.tvText.show()
         binding.progressIndicator.hide()
 
         binding.btnCircularRevealAnimation.setOnClickListener {
@@ -34,6 +34,25 @@ class ViewAnimationsActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         //createCrossFadeAnimation()
+    }
+
+    private fun createCrossFadeAnimation() {
+        binding.tvText.apply {
+            show()
+            alpha = 0.0f
+
+            animate()
+                .alpha(1.0f)
+                .setDuration(ANIMATION_DURATION)
+                .setListener(null)
+        }
+
+        binding.progressIndicator.apply {
+            animate()
+                .alpha(0.0f)
+                .setDuration(ANIMATION_DURATION)
+                .addAnimationEndListener { binding.progressIndicator.hide() }
+        }
     }
 
     private fun createCircularRevealAnimation() {
@@ -61,22 +80,5 @@ class ViewAnimationsActivity : AppCompatActivity() {
         anim.start()
     }
 
-    private fun createCrossFadeAnimation() {
-        binding.tvText.apply {
-            show()
-            alpha = 0.0f
 
-            animate()
-                .alpha(1.0f)
-                .setDuration(ANIMATION_DURATION)
-                .setListener(null)
-        }
-
-        binding.progressIndicator.apply {
-            animate()
-                .alpha(0.0f)
-                .setDuration(ANIMATION_DURATION)
-                .addAnimationEndListener { binding.progressIndicator.hide() }
-        }
-    }
 }

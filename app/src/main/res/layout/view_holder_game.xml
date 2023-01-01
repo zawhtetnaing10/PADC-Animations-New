@@ -19,6 +19,7 @@
 			android:id="@+id/ivGameImage"
 			android:layout_width="match_parent"
 			android:layout_height="@dimen/image_height_game"
+			android:transitionName="@string/transition_game"
 			android:scaleType="centerCrop"
 			android:src="@drawable/elden_ring" />
 

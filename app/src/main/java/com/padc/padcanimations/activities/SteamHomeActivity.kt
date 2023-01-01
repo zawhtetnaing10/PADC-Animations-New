@@ -2,12 +2,12 @@ package com.padc.padcanimations.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.core.app.ActivityOptionsCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.padc.padcanimations.R
 import com.padc.padcanimations.adapters.GameListAdapter
 import com.padc.padcanimations.data.vos.GameVO
-import com.padc.padcanimations.databinding.ActivityMainBinding
 import com.padc.padcanimations.databinding.ActivitySteamHomeBinding
 import com.padc.padcanimations.mvp.presenters.SteamHomePresenter
 import com.padc.padcanimations.mvp.presenters.SteamHomePresenterImpl
@@ -52,8 +52,10 @@ class SteamHomeActivity : AppCompatActivity(), SteamHomeView {
         mAdapter.setNewData(gameList)
     }
 
-    override fun navigateToGameDetails(gameId: Int) {
-        startActivity(GameDetailsActivity.newIntent(this, gameId))
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    override fun navigateToGameDetails(gameId: Int, transitionPair: androidx.core.util.Pair<View, String>) {
+        val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+            this, transitionPair
+        )
+        startActivity(GameDetailsActivity.newIntent(this, gameId), options.toBundle())
     }
 }

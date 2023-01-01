@@ -47,6 +47,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="@dimen/image_height_game"
 					android:scaleType="centerCrop"
+					android:transitionName="@string/transition_game"
 					android:src="@drawable/elden_ring" />
 
 			</androidx.cardview.widget.CardView>

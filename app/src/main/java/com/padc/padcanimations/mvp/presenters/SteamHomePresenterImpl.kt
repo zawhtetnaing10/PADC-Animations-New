@@ -1,5 +1,6 @@
 package com.padc.padcanimations.mvp.presenters
 
+import android.view.View
 import androidx.lifecycle.ViewModel
 import com.padc.padcanimations.data.models.SteamModel
 import com.padc.padcanimations.data.models.SteamModelImpl
@@ -21,8 +22,8 @@ class SteamHomePresenterImpl : SteamHomePresenter, ViewModel() {
         mView?.showGames(mSteamModel.getAllGames())
     }
 
-    override fun onTapGame(gameId: Int) {
-        mView?.navigateToGameDetails(gameId)
+    override fun onTapGame(gameId: Int, transitionPair: androidx.core.util.Pair<View, String>) {
+        mView?.navigateToGameDetails(gameId, transitionPair)
     }
 
 

@@ -14,6 +14,7 @@ class PhysicsBasedAnimationsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPhysicsBasedAnimationsBinding
 
     var springForce: SpringForce? = null
+
     var horizontalPositionDifference: Float = 0.0f
     var verticalPositionDifference: Float = 0.0f
 

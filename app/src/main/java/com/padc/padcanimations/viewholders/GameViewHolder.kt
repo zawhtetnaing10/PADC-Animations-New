@@ -1,8 +1,8 @@
 package com.padc.padcanimations.viewholders
 
-import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.padc.padcanimations.R
 import com.padc.padcanimations.data.vos.GameVO
 import com.padc.padcanimations.databinding.ViewHolderGameBinding
 import com.padc.padcanimations.delegates.GameViewHolderActionDelegate
@@ -17,7 +17,13 @@ class GameViewHolder(
 
     init {
         binding.ivGameImage.setOnClickListener {
-            mDelegate?.onTapGame(mData?.id ?: -1)
+            mDelegate?.onTapGame(
+                mData?.id ?: -1, androidx.core.util.Pair.create(
+                    binding.ivGameImage, binding.root.resources.getString(
+                        R.string.transition_game
+                    )
+                )
+            )
         }
     }
 
