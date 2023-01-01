@@ -19,7 +19,7 @@ class SteamHomeActivity : AppCompatActivity(), SteamHomeView {
     private lateinit var binding: ActivitySteamHomeBinding
 
     // Adapter
-    private val mAdapter = GameListAdapter()
+    private lateinit var mAdapter: GameListAdapter
 
     // Presenter
     private lateinit var mPresenter: SteamHomePresenter
@@ -40,6 +40,7 @@ class SteamHomeActivity : AppCompatActivity(), SteamHomeView {
     }
 
     private fun setUpRecyclerView() {
+        mAdapter = GameListAdapter(mPresenter)
         binding.rvGames.also {
             it.adapter = mAdapter
             it.layoutManager =
@@ -49,5 +50,9 @@ class SteamHomeActivity : AppCompatActivity(), SteamHomeView {
 
     override fun showGames(gameList: List<GameVO>) {
         mAdapter.setNewData(gameList)
+    }
+
+    override fun navigateToGameDetails(gameId: Int) {
+        startActivity(GameDetailsActivity.newIntent(this, gameId))
     }
 }

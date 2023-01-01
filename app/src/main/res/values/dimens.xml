@@ -33,5 +33,6 @@
 
 	<!--App Specific-->
 	<dimen name="image_height_game">200dp</dimen>
+	<dimen name="game_details_label_width">88dp</dimen>
 </resources>
 

@@ -7,4 +7,8 @@ object SteamModelImpl : SteamModel {
     override fun getAllGames(): List<GameVO> {
         return getGames()
     }
+
+    override fun getGameById(gameId: Int): GameVO {
+        return getGames().first { it.id == gameId }
+    }
 }

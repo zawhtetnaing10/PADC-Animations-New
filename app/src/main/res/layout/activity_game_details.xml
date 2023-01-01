@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/colorSteam"
+	tools:context=".activities.GameDetailsActivity">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:id="@+id/appbar"
+		android:layout_width="match_parent"
+		app:elevation="0dp"
+		android:theme="@style/ThemeOverlay.AppCompat"
+		android:layout_height="?attr/actionBarSize" >
+
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			app:titleTextColor="@color/white"
+			app:title=""
+			android:theme="@style/ThemeOverlay.AppCompat"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<androidx.cardview.widget.CardView
+				android:id="@+id/cvGameImage"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="@dimen/margin_medium_2"
+				app:cardBackgroundColor="@android:color/transparent"
+				app:cardCornerRadius="@dimen/margin_card_medium_2"
+				app:cardElevation="0dp">
+
+				<androidx.appcompat.widget.AppCompatImageView
+					android:id="@+id/ivGameImage"
+					android:layout_width="match_parent"
+					android:layout_height="@dimen/image_height_game"
+					android:scaleType="centerCrop"
+					android:src="@drawable/elden_ring" />
+
+			</androidx.cardview.widget.CardView>
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tvGameName"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/cvGameImage"
+				android:layout_marginStart="@dimen/margin_medium_2"
+				android:layout_marginEnd="@dimen/margin_medium_2"
+				android:text="Elden Ring"
+				android:textColor="@color/white"
+				android:textSize="@dimen/text_regular_3x"
+				android:textStyle="bold" />
+
+			<LinearLayout
+				android:id="@+id/llDeveloper"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/tvGameName"
+				android:layout_marginStart="@dimen/margin_medium_2"
+				android:layout_marginTop="@dimen/margin_medium"
+				android:layout_marginEnd="@dimen/margin_medium_2"
+				android:orientation="horizontal">
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:layout_width="@dimen/game_details_label_width"
+					android:layout_height="wrap_content"
+					android:text="Developer"
+					android:textColor="@color/material_dynamic_secondary40"
+					android:textSize="@dimen/text_regular_2x" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/tvDeveloper"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/margin_medium_2"
+					android:text="FromSoftware"
+					android:textColor="@android:color/holo_blue_dark"
+					android:textSize="@dimen/text_regular_2x"
+					android:textStyle="bold" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/llPublisher"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/llDeveloper"
+				android:layout_marginStart="@dimen/margin_medium_2"
+				android:layout_marginTop="@dimen/margin_medium"
+				android:layout_marginEnd="@dimen/margin_medium_2"
+				android:orientation="horizontal">
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:layout_width="@dimen/game_details_label_width"
+					android:layout_height="wrap_content"
+					android:text="Publisher"
+					android:textColor="@color/material_dynamic_secondary40"
+					android:textSize="@dimen/text_regular_2x" />
+
+				<androidx.appcompat.widget.AppCompatTextView
+					android:id="@+id/tvPublisher"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="@dimen/margin_medium_2"
+					android:text="Bandai Namco"
+					android:textColor="@android:color/holo_blue_dark"
+					android:textSize="@dimen/text_regular_2x"
+					android:textStyle="bold" />
+
+
+			</LinearLayout>
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tvDescription"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/llPublisher"
+				android:layout_marginStart="@dimen/margin_medium_2"
+				android:layout_marginTop="@dimen/margin_medium_2"
+				android:layout_marginEnd="@dimen/margin_medium_2"
+				android:paddingBottom="@dimen/margin_medium_3"
+				android:lineSpacingMultiplier="1.2"
+				android:text="Mortal Shell is a deep action-RPG that tests your sanity and resilience in a shattered world. As the remains of humanity wither and rot, zealous foes fester in the ruins. They spare no mercy, with survival demanding superior awareness, precision and instincts. Track down hidden sanctums of devout followers and discover your true purpose.
+The dead litter this tattered landscape, but not all are without hope. The lost remains of defeated warriors are yours to discover. Awaken these Mortal Shells, occupy their bodies and significantly open your understanding to diverse masteries of combat."
+				android:textColor="@color/white" />
+
+		</RelativeLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -5,6 +5,7 @@ import com.padc.padcanimations.data.vos.GameVO
 fun getGames(): List<GameVO> {
     return listOf(
         GameVO(
+            id = 1,
             image = "https://cdn.akamai.steamstatic.com/steam/apps/1245620/header.jpg?t=1672223247",
             name = "Elden Ring",
             description = "THE NEW FANTASY ACTION RPG.\n" +
@@ -22,6 +23,7 @@ fun getGames(): List<GameVO> {
             price = 59.99
         ),
         GameVO(
+            id = 2,
             image = "https://cdn.akamai.steamstatic.com/steam/apps/374320/header.jpg?t=1671097812",
             name = "Dark Souls 3",
             description = "Dark Souls continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series. Prepare yourself and Embrace The Darkness!",
@@ -30,6 +32,7 @@ fun getGames(): List<GameVO> {
                 price = 59.99
         ),
         GameVO(
+            id = 3,
             image = "https://cdn.akamai.steamstatic.com/steam/apps/814380/header.jpg?t=1669076148",
             name = "Sekiro Shadows Die Twice",
             description = "Game of the Year - The Game Awards 2019 Best Action Game of 2019 - IGN Carve your own clever path to vengeance in the award winning adventure from developer FromSoftware, creators of Bloodborne and the Dark Souls series. Take Revenge. Restore Your Honor. Kill Ingeniously.",
@@ -38,6 +41,7 @@ fun getGames(): List<GameVO> {
             price = 59.99
         ),
         GameVO(
+            id = 4,
             image = "https://cdn.akamai.steamstatic.com/steam/apps/1325200/header.jpg?t=1671498323",
             name = "Nioh 2 - The Complete Edition",
             description = "UNLEASH YOUR DARKNESS\n" +
@@ -50,6 +54,7 @@ fun getGames(): List<GameVO> {
             price = 59.99
         ),
         GameVO(
+            id = 5,
             image = "https://cdn.akamai.steamstatic.com/steam/apps/1110910/header.jpg?t=1668014729",
             name = "Mortal Shell",
             description = "Mortal Shell is a deep action-RPG that tests your sanity and resilience in a shattered world. As the remains of humanity wither and rot, zealous foes fester in the ruins. They spare no mercy, with survival demanding superior awareness, precision and instincts. Track down hidden sanctums of devout followers and discover your true purpose.\nThe dead litter this tattered landscape, but not all are without hope. The lost remains of defeated warriors are yours to discover. Awaken these Mortal Shells, occupy their bodies and significantly open your understanding to diverse masteries of combat.",

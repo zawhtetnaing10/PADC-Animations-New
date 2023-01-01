@@ -4,4 +4,5 @@ import com.padc.padcanimations.data.vos.GameVO
 
 interface SteamModel {
     fun getAllGames() : List<GameVO>
+    fun getGameById(gameId : Int) : GameVO
 }

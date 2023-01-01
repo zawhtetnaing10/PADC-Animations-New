@@ -20,4 +20,10 @@ class SteamHomePresenterImpl : SteamHomePresenter, ViewModel() {
     override fun onUiReady() {
         mView?.showGames(mSteamModel.getAllGames())
     }
+
+    override fun onTapGame(gameId: Int) {
+        mView?.navigateToGameDetails(gameId)
+    }
+
+
 }

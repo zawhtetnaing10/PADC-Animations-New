@@ -14,12 +14,21 @@
 		<androidx.appcompat.widget.AppCompatTextView
 			android:id="@+id/tvSales"
 			android:layout_width="wrap_content"
-			android:text="Games available this year."
+			android:text="Games available"
 			android:textColor="@color/white"
 			android:textSize="@dimen/text_heading_1x"
 			android:layout_marginStart="@dimen/margin_medium_2"
 			android:layout_marginTop="@dimen/margin_medium_2"
 			android:textStyle="bold"
+			android:layout_height="wrap_content"/>
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/ivCart"
+			android:layout_alignParentEnd="true"
+			android:src="@drawable/ic_baseline_add_shopping_cart_24"
+			android:layout_marginTop="@dimen/margin_medium_3"
+			android:layout_marginEnd="@dimen/margin_medium_2"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"/>
 
 
