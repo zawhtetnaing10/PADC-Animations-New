@@ -54,6 +54,6 @@ class SteamHomeActivity : AppCompatActivity(), SteamHomeView {
 
     override fun navigateToGameDetails(gameId: Int) {
         startActivity(GameDetailsActivity.newIntent(this, gameId))
-        //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
     }
 }
