@@ -1,14 +1,14 @@
-package com.padc.padcanimations
+package com.padc.padcanimations.activities
 
 import android.animation.Animator
-import android.animation.Animator.AnimatorListener
 import android.animation.AnimatorListenerAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.ViewAnimationUtils
+import com.padc.padcanimations.extensions.addAnimationEndListener
 import com.padc.padcanimations.databinding.ActivityViewAnimationsBinding
-import com.padc.padcanimations.databinding.ActivityViewGroupAnimationsBinding
+import com.padc.padcanimations.extensions.hide
+import com.padc.padcanimations.extensions.show
 import kotlin.math.hypot
 
 class ViewAnimationsActivity : AppCompatActivity() {

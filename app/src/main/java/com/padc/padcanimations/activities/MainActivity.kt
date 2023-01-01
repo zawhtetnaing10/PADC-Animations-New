@@ -1,12 +1,10 @@
-package com.padc.padcanimations
+package com.padc.padcanimations.activities
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.padc.padcanimations.databinding.ActivityMainBinding
-import kotlinx.coroutines.NonCancellable.start
 
 class MainActivity : AppCompatActivity() {
 

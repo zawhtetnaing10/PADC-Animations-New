@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/colorSteam">
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/cvImage"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:cardBackgroundColor="@android:color/transparent"
+		android:layout_marginTop="@dimen/margin_medium_3"
+		app:cardCornerRadius="@dimen/margin_card_medium_2"
+		app:cardElevation="0dp">
+
+		<androidx.appcompat.widget.AppCompatImageView
+			android:id="@+id/ivGameImage"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/image_height_game"
+			android:scaleType="centerCrop"
+			android:src="@drawable/elden_ring" />
+
+	</androidx.cardview.widget.CardView>
+
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvDescription"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/cvImage"
+		android:layout_marginTop="@dimen/margin_medium"
+		android:maxLines="2"
+		android:textColor="@color/white"
+		tools:text="Dark Souls continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series. Prepare yourself and Embrace The Darkness!" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tvPrice"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/tvDescription"
+		android:layout_marginTop="@dimen/margin_small"
+		android:maxLines="2"
+		android:textColor="@color/white"
+		android:textSize="@dimen/text_regular_2x"
+		android:textStyle="bold"
+		tools:text="59.99 USD" />
+
+</RelativeLayout>

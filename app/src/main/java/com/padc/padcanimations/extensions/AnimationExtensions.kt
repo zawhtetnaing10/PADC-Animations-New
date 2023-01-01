@@ -1,4 +1,4 @@
-package com.padc.padcanimations
+package com.padc.padcanimations.extensions
 
 import android.animation.Animator
 import android.animation.Animator.AnimatorListener

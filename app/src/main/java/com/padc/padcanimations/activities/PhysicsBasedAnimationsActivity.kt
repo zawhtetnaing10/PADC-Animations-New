@@ -1,4 +1,4 @@
-package com.padc.padcanimations
+package com.padc.padcanimations.activities
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,6 @@ import android.view.MotionEvent
 import androidx.dynamicanimation.animation.DynamicAnimation
 import androidx.dynamicanimation.animation.SpringAnimation
 import androidx.dynamicanimation.animation.SpringForce
-import com.padc.padcanimations.databinding.ActivityMainBinding
 import com.padc.padcanimations.databinding.ActivityPhysicsBasedAnimationsBinding
 
 class PhysicsBasedAnimationsActivity : AppCompatActivity() {

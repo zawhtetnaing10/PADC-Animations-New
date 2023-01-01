@@ -1,9 +1,12 @@
-package com.padc.padcanimations
+package com.padc.padcanimations.activities
 
 import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.padc.padcanimations.R
 import com.padc.padcanimations.databinding.ActivityViewGroupAnimationsBinding
+import com.padc.padcanimations.extensions.show
+import com.padc.padcanimations.extensions.toggleVisibility
 
 class ViewGroupAnimationsActivity : AppCompatActivity() {
 
@@ -16,6 +19,7 @@ class ViewGroupAnimationsActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        // View Group Animations
         binding.btnFirst.setOnClickListener {
             binding.btnFirst.toggleVisibility()
         }
@@ -34,6 +38,7 @@ class ViewGroupAnimationsActivity : AppCompatActivity() {
             binding.btnThird.show()
         }
 
+        // Animated Drawables
         binding.btnAddToCart.setBackgroundResource(R.drawable.animation_images)
         val animation = binding.btnAddToCart.background as AnimationDrawable
         binding.btnAddToCart.setOnClickListener {
